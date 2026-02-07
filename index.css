@@ -22,6 +22,7 @@
 header, footer {
     background-color: midnightblue;
     text-align: left;
+    text-autospace: auto;
     padding: 1%;
     color: white;
 }
@@ -104,14 +105,6 @@ main ul li {
     margin-bottom: 2%;
 }
 
-header, footer {
-    background-color: midnightblue;
-    text-align: left;
-    text-autospace: auto;
-    padding: 1%;
-    color: white;
-}
-
 header h1 {
     font-size: calc(12px + 1.1vw);
 }
@@ -127,9 +120,10 @@ header p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 85%;
-    max-width: 360px;
-    padding: 20px;
+    width: 90%;
+    max-width: 420px;
+    padding: 3%;
+    font-size: calc(12px + 0.6vw);
     margin: 4% auto 20px auto;
     color: white;
 }
@@ -138,6 +132,7 @@ header p {
 #calculator-container h3 {
     color: white;
     margin-bottom: 10px;
+    font-size: calc(12px + 0.6vw);
 }
 
 #calculator-container input {
@@ -147,6 +142,7 @@ header p {
     border-radius: 8px;
     border: 1px solid lightsteelblue;
     background-color: white;
+    font-size: calc(12px + 0.6vw);
 }
 
 .calc-buttons {
@@ -158,7 +154,7 @@ header p {
 
 .calc-buttons button {
     padding: 12px 0;
-    font-size: calc(12px + 0.5vw);
+    font-size: calc(12px + 0.7vw);
     background-color: purple;
     color: white;
     border: 1px solid white;
@@ -175,11 +171,9 @@ button[onclick="clearOut()"] {
     min-height: 3%;
     margin-top: 20px;
     text-align: center;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 @media screen and (max-width: 1000px) {
@@ -215,5 +209,20 @@ button[onclick="clearOut()"] {
     }
     nav a {
         font-size: calc(8px + 1vw);
+    }
+    #calculator-container {
+        transform: scale(0.75);
+        transform-origin: top center;
+    }
+    #calculator-container,
+    #calculator-container h3,
+    #calculator-container label,
+    #calculator-container input,
+    .calc-buttons button,
+    #output {
+        font-size: calc(7px + 0.6vw);
+    }
+    .calc-buttons button {
+        padding: 0.5% 0;
     }
 }
