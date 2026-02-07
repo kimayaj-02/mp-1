@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+        <title>Projects | Kimaya's Resume</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+    </head>
+
+    <body class="projects-page">
+        <div id = "page-wrapper">
+              <header>
+                <h1>Kimaya's Resume</h1>
+                <p> An online application showcasing Kimaya's career background</p>
+              </header>
+
+              <div id = "container">
+                  <nav>
+                    <ul>
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="education.html">Education</a></li>
+                      <li><a href="experiences.html">Experiences</a></li>
+                      <li><a href="leadership.html">Leadership</a></li>
+                      <li><a href="projects.html">Projects</a></li>
+                      <li><a href="certs.html">Certifications</a></li>
+                    </ul>
+                  </nav>
+
+                  <main>
+                      <h2> Projects </h2>
+                      <h4> Product Valuation & Investment Pitch </h4>
+                      <ul>
+                          <li>
+                              Led financial analysis for an 8-person team, directing valuation for an innovative
+                              new home furniture product
+                          </li>
+                          <li>
+                              Performed advanced quantitative modeling, including K-means clustering and multivariate
+                              regression, on consumer research data to identify market segments and inform product
+                              pricing and positioning strategies
+                          </li>
+                          <li>
+                              DCreated a 20-page financial workbook and comprehensive business plan integrating cost
+                              structure, pricing strategy, and market sizing; presented the plan as an investment pitch
+                              to potential stakeholders
+                          </li>
+                      </ul>
+
+                      <h4> Stock Price Forecasting Model </h4>
+                      <ul>
+                          <li>
+                              Implemented an LSTM-based predictive model in Python using 20+ years of Microsoft stock
+                              data, achieving a validation mean absolute error of 4.21 to support investment analysis
+                              and identify trading opportunities
+                          </li>
+                          <li>
+                              Visualized model predictions against actual stock prices to benchmark accuracy and refine
+                              forecasting approach
+                          </li>
+
+                      </ul>
+
+                      <h4> Project Management Intern - NYU Langone </h4>
+                      <ul>
+                          <li>
+                              Supported 25+ enterprise-wide digital transformation initiatives focused on improving
+                              operational efficiency and patient care, contributing to their successful implementation
+                              across corporate and hospital systems
+                          </li>
+                          <li>
+                              Tracked project progress and prepared daily presentations, equipping leadership to make
+                              informed adjustments
+                          </li>
+                      </ul>
+
+                      <div id="calculator-container">
+                          <h3>Javascript Calculator</h3>
+
+                          <div class="calc-inputs">
+                              <div class="calc-field">
+                                  <label for="first-number">First Number: </label>
+                                  <input type="text" id="first-number">
+                              </div>
+                              <div class="calc-field">
+                                  <label for="second-number">Second Number: </label>
+                                  <input type="text" id="second-number">
+                              </div>
+                          </div>
+
+                          <div class="calc-buttons">
+                              <button onclick="doAdd()"> + </button>
+                              <button onclick="doSubtract()"> - </button>
+                              <button onclick="doMultiply()"> * </button>
+                              <button onclick="doDivision()"> / </button>
+                              <button onclick="doPower()"> ** </button>
+                              <button onclick="clearOut()"> Clear </button>
+                          </div>
+
+                          <div class="calc-output">
+                              <h3 id="output"></h3>
+                          </div>
+                      </div>
+
+                  </main>
+
+              </div>
+              <footer>
+                <p>All rights reserved &#169; <a href="">Credits</a></p>
+              </footer>
+
+        </div>
+
+        <script>
+
+            function helper(ans) {
+                const outputTag = document.getElementById("output");
+                outputTag.innerHTML = String(ans);
+
+                if (ans < 0) {
+                    outputTag.style.backgroundColor = "red";
+                    outputTag.style.color = "white";
+                } else {
+                    outputTag.style.backgroundColor = "transparent";
+                    outputTag.style.color = "white";
+                }
+            }
+
+            function doAdd() {
+                let first = Number(document.getElementById("first-number").value);
+                let second = Number(document.getElementById("second-number").value);
+                helper(first + second); // Just pass the math to the helper
+            }
+
+            function doSubtract() {
+                let first = Number(document.getElementById("first-number").value);
+                let second = Number(document.getElementById("second-number").value);
+                helper(first - second);
+            }
+
+            function doMultiply() {
+                let first = Number(document.getElementById("first-number").value);
+                let second = Number(document.getElementById("second-number").value);
+                helper(first * second);
+            }
+
+            function doDivision() {
+                let first = Number(document.getElementById("first-number").value);
+                let second = Number(document.getElementById("second-number").value);
+                helper(first / second);
+            }
+
+            function doPower() {
+                let first = Number(document.getElementById("first-number").value);
+                let second = Number(document.getElementById("second-number").value);
+
+                let result = 1;
+                for (let i = 0; i < second; i++) {
+                    result = result * first;
+                }
+                helper(result);
+            }
+
+            function clearOut() {
+                document.getElementById("first-number").value = "";
+                document.getElementById("second-number").value = "";
+                document.getElementById("output").innerHTML = "";
+                document.getElementById("output").style.backgroundColor = "transparent";
+            }
+
+        </script>
+
+    </body>
+
+</html>

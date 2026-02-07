@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Sans-Serif;
+}
+
+#page-wrapper {
+    width: 80vw;
+    background-color: lightcyan;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+header, footer {
+    background-color: midnightblue;
+    text-align: left;
+    padding: 1%;
+    color: white;
+}
+
+nav {
+    width: 30%;
+    background-color: lightblue;
+    min-height: 100vh;
+}
+
+nav ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+nav ul li {
+    width: 100%;
+    background-color: purple;
+    color: white;
+    padding: 2%;
+    text-align: center;
+    border-bottom: 10px solid lightblue;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: calc(2px + 1.6vw);
+}
+
+main {
+    width: 70%;
+    height: 100vh;
+    text-align: left;
+    padding: 1% 2%;
+    background-color: lightcyan;
+}
+
+.projects-page main {
+    overflow-y: auto;
+}
+
+main img {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    padding-top: 1%;
+    display: block;
+    margin: 0 auto 1.5% auto;
+}
+
+.certs-page img {
+    width: 240px;
+}
+
+main h2 {
+    font-style: italic;
+    font-size: calc(10px + 1.6vw);
+    padding-bottom: 2%;
+    color: midnightblue;
+}
+
+main h5 {
+    font-size: calc(2px + 1.4vw);
+    padding-top: 2%;
+}
+
+main h4 {
+    font-size: calc(2px + 1.4vw);
+    margin-top: 2%;
+}
+
+main ul {
+    line-height: 100%;
+    font-size: calc(1px + 1vw);
+    margin-top: 2%;
+    text-align: left;
+}
+
+main ul li {
+    margin-bottom: 2%;
+}
+
+header, footer {
+    background-color: midnightblue;
+    text-align: left;
+    text-autospace: auto;
+    padding: 1%;
+    color: white;
+}
+
+header h1 {
+    font-size: calc(12px + 1.1vw);
+}
+
+header p {
+    font-size: calc(10px + 0.6vw);
+}
+
+#calculator-container {
+    background-color: midnightblue;
+    border: 2px solid white;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    max-width: 360px;
+    padding: 20px;
+    margin: 4% auto 20px auto;
+    color: white;
+}
+
+#calculator-container label,
+#calculator-container h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+#calculator-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid lightsteelblue;
+    background-color: white;
+}
+
+.calc-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+.calc-buttons button {
+    padding: 12px 0;
+    font-size: calc(12px + 0.5vw);
+    background-color: purple;
+    color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button[onclick="clearOut()"] {
+    margin-top: 0;
+}
+
+#output {
+    width: 100%;
+    min-height: 3%;
+    margin-top: 20px;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@media screen and (max-width: 1000px) {
+    #container {
+        flex-direction: column;
+    }
+    main {
+        width: 100%;
+        min-height: auto;
+    }
+    nav {
+        width: 100%;
+        min-height: auto;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    header {
+        text-align: center;
+    }
+    nav {
+        width: 100%;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: row;
+    }
+    nav ul li {
+        flex: 1;
+        border-bottom: none;
+        border-right: 2px solid lightblue;
+        padding: 0.5% 0.2%;
+    }
+    nav a {
+        font-size: calc(8px + 1vw);
+    }
+}
