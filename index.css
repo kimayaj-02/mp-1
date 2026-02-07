@@ -85,8 +85,7 @@ main h2 {
 }
 
 main h5 {
-    font-size: calc(2px + 1.4vw);
-    padding-top: 2%;
+    font-size: calc(2px + 1.2vw);
 }
 
 main h4 {
